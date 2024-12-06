@@ -1,1 +1,59 @@
-reovrrijvtrnvrnvjrencreicjrivnt,fkdnriufrlkc,dkjcnroc,dckdekcejoirvjpvrkvoirkvpotbniubdvovjevekvepivejvfvdvndve,vùkepve
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Citations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        h1 {
+            color: #0077cc;
+        }
+        .quote {
+            font-size: 1.5em;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #0077cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005999;
+        }
+    </style>
+</head>
+<body>
+    <h1>Générateur de Citations</h1>
+    <div class="quote" id="quote"></div>
+    <button onclick="generateQuote()">Nouvelle Citation</button>
+
+    <script>
+        const quotes = [
+            "Le succès n'est pas final, l'échec n'est pas fatal : c'est le courage de continuer qui compte. - Winston Churchill",
+            "Croyez en vos rêves et ils pourraient se réaliser. Croyez en vous et ils se réaliseront sûrement. - Martin Luther King Jr.",
+            "La seule limite à notre épanouissement de demain sera nos doutes d'aujourd'hui. - Franklin D. Roosevelt",
+            "Vous êtes plus courageux que vous ne le croyez, plus fort que vous ne le paraissez, et plus intelligent que vous ne le pensez. - A.A. Milne",
+            "N'attendez pas les opportunités. Créez-les. - George Bernard Shaw"
+        ];
+
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').innerText = quotes[randomIndex];
+        }
+
+        // Affiche une citation au chargement de la page
+        generateQuote();
+    </script>
+</body>
+</html>
